@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Nav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,9 +26,11 @@ export default function RootLayout({ children }) {
           <div className="gradient" />
         </div>
         <main className="app">
+          <Navbar/>
           {children}
 
         </main>
+
       </body>
     </html>
   );
