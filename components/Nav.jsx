@@ -40,7 +40,7 @@ const Navbar = () => {
                             Sign Out
                         </button>
                         <Link href="/profile">
-                            <Image src="/images/logo.svg" alt='profile image' width={30} height={30} className='rounded-full' />
+                            <Image src={session?.user.image} alt='profile image' width={30} height={30} className='rounded-full' />
                         </Link>
                     </div>
                 ) : (

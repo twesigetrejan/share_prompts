@@ -12,6 +12,9 @@ const handler = NextAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         })
     ],
+    // this callback object should contain the two functions but then you will get an access denied 
+    // callbacks: {
+
     async session({ session }) {
         const sessionUser = await User.findOne({
             email: session.user.email
@@ -46,6 +49,7 @@ const handler = NextAuth({
         }
 
     }
+    // }
 })
 
 export { handler as GET, handler as POST };
