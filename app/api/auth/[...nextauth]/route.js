@@ -22,7 +22,6 @@ const handler = NextAuth({
         session.user.id = session = sessionUser._id.toString();
 
         return session;
-
     },
     async signIn({ profile }) {
         try {
